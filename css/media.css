@@ -1,0 +1,152 @@
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 1199px) {
+   
+
+}
+
+@media only screen and (max-width: 991px) {
+    #top header nav {padding:0;}
+    nav ul li a {margin:0 7px; font-size: 13px;}
+    .who-sell-list {max-width:700px; margin:auto;}
+    .where-title, .where-clients {font-size: 15px; text-align: center;}
+    .how-item {margin:10px 4px;}
+  
+   
+}
+
+@media only screen and (max-width: 767px) {
+    header {text-align: right; padding:10px 0 0; box-shadow:-1px 1px 3px rgba(0,0,0,.6);}
+    header .logo {margin-bottom:10px;}
+    header nav {opacity:0; pointer-events: none; overflow:hidden; height:0; width:96%; margin:auto; transition:.3s; margin:0;
+     box-shadow: -1px 0 7px 3px #d0c8c8 inset, 0 0 1px  #000; border: 1px solid #ccc; background: #e6dcdc;}
+    header nav.open {opacity:1; pointer-events:auto; height:219px; margin:0 auto 10px;}
+    nav ul {margin:0;}
+    nav ul li {display: block; border-bottom: 1px solid #ccc;}
+    nav ul li a {padding:5px 0; font-size:14px;}
+    .mob-menu-toggle {cursor:pointer; opacity:.5; transition:.3s; width:49px; height:50px; display: block; float:left;}
+    .mob-menu-toggle:hover {opacity:1;}
+    .mob-menu-toggle div {height:4px; transition:.3s; width:30px; background-color: #444; position:absolute; left:24px; border-radius:3px;}
+    .mob-menu-toggle div:nth-child(1) {top:12px;}
+    .mob-menu-toggle div:nth-child(2) {top:21px;}
+    .mob-menu-toggle div:nth-child(3) {top:30px;}
+    .open.mob-menu-toggle div {background:#efa100;}
+    .open.mob-menu-toggle div:nth-child(1) {top:20px; transform:rotate(-45deg);}
+    .open.mob-menu-toggle div:nth-child(2) {opacity:0;}
+    .open.mob-menu-toggle div:nth-child(3) {top:20px; transform:rotate(45deg);}
+    h1, h2, .where h2 {font-size: 24px;}
+    h3, h4 {font-size: 18px;}
+    .top-title-ask {padding:0 20px;}
+    .top-info-left figcaption {padding-left:100px; padding-right:0;}
+    .top-info-row.first .top-info-left div, .top-info-row.second .top-info-left div {float:left;}
+    .top-info-row .top-info-right {margin-top:-15px;}
+    .top-info-row figure div:after {content:none}
+    .top-info-row {padding:10px 0;}
+    .top-info h3 {margin-top:-5px; font-weight: bold;}
+    #top~article:not(.where) {padding:10px 0;}
+    #top~article:not(.where) h2 {font-size: 24px; margin:30px 0;}
+    .where-item {float:none;}
+    .where-left, .where-center, .where-right {text-align:right; width:100%;}
+    .where-center .where-map {background:url(../img/m4.jpg) center no-repeat; border:none; height: 211px;}
+    .how-item {margin:10px 0px;}
+    #call-back, #back-to-top {display: none !important;}
+    footer h4 { width: 250px; margin: auto; }
+    footer .contacts { width: 250px; margin: 15px auto 0; }
+    footer .contacts .copyright {float:none; text-align: center; display: block; margin:15px 0 0;}
+
+}
+
+@media only screen and (max-width: 320px) {
+   
+   
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
